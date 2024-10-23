@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>l_v_2</artifactId>
+  <artifactId>1</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>l_v_2</name>
+  <name>1</name>
   <url>http://maven.apache.org</url>
 
   <properties>

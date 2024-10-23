@@ -42,8 +42,10 @@ public class App {
                         System.out.println("Where?");
                         n = console.nextInt();
 
-                        if (gallery.check(n-1) && n>=0) {
+                        if (gallery.checkSize(n) && n>=0) {
                             gallery.add(str, n);
+                        } else {
+                            System.out.println("This position is not available");
                         }
 
                         System.out.println("Enough? 0 - yes, 1 - no");
@@ -55,15 +57,19 @@ public class App {
                 case (2):
                     System.out.println("The number of the item to get:");
                     n = console.nextInt();
-                    if ( gallery.check(n) && n>=0) {
+                    if ( gallery.checkSize(n+1) && n>=0) {
                         System.out.println(gallery.getData(n));
+                    }else {
+                        System.out.println("This position is not available");
                     }
                     break;
                 case (3):
                     System.out.println("The number of the item to delete:");
                     n = console.nextInt();
-                    if (gallery.check(n) && n>=0) {
+                    if (gallery.checkSize(n+1) && n>=0) {
                         gallery.clear(n);
+                    }else {
+                        System.out.println("This position is not available");
                     }
                     break;
                 default:
