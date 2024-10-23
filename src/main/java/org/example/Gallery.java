@@ -1,34 +1,29 @@
 package org.example;
 
 /**
- * Класс реализующий связанный спиок
+ * Класс, реализующий связанный спиок
  * @param <A> произвольный тип
  */
 public class Gallery<A> {
     /**
-     * количество элементов в списке
+     * Количество элементов в списке
      */
     private int count;
     /**
      * Ссылка на первый элемент
      */
     private Node<A> first;
-//    /**
-//     * ссылка на последний элемент
-//     */
-//    private Node<A> last;
 
     /**
-     * конструктор без входых данных
+     * Конструктор без входых данных
      */
     public Gallery() {
         count = 0;
         first = null;
-//        last = null;
     }
 
     /**
-     * проверка на пустоту
+     * Проверка на пустоту
      * @return true - количество элементов равно нулю, false - список не пуст
      */
     public  boolean isEmpty() {
@@ -36,7 +31,7 @@ public class Gallery<A> {
     }
 
     /**
-     * добавление элемента на требуемое место
+     * Добавление элемента на требуемое место
      * @param element передаваемый объект
      * @param n номер позиции, где должен оказаться объект
      */
@@ -51,7 +46,6 @@ public class Gallery<A> {
 
         if (isEmpty()){
             first = new Node<A>(element, null);
-//            last = first;
             count = 1;
         } else if (n != 0) {
             temp.next = now.next;
@@ -65,7 +59,7 @@ public class Gallery<A> {
     }
 
     /**
-     * выводит пронумерованный список
+     * Выводит пронумерованный список
      */
     public void view () {
         Node<A> element = first;
@@ -77,7 +71,7 @@ public class Gallery<A> {
     }
 
     /**
-     * проверяет входит ли число в размер списка
+     * Проверяет входит ли число в размер списка
      * @param n число
      * @return true - число не больше размера, false - число не удовлетворяет размеру списка
      */
@@ -86,7 +80,7 @@ public class Gallery<A> {
     }
 
     /**
-     * удаляет элемент на заданной позиции
+     * Удаляет элемент на заданной позиции
      * @param n позиция
      */
     public void clear (int n) {
